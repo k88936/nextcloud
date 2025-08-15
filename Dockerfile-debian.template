@@ -166,8 +166,7 @@ COPY config/* /usr/src/nextcloud/config/
 
 RUN set -ex; \
     apt-get update; \
-    apt-get install -y --no-install-recommends aria2; \
+    apt-get install -y --no-install-recommends aria2 ffmpeg; \
     apt-get dist-clean
-    
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["%%CMD%%"]
